@@ -1,0 +1,183 @@
+body{
+  background-color:rgb(41, 29, 214);
+  background: linear-gradient(341deg, #1b56b3, #581bb3, #7a1bb3);
+    background-size: 600% 600%;
+    -webkit-animation: BackgroundAnimation 4s ease infinite;
+    -moz-animation: BackgroundAnimation 4s ease infinite;
+    animation: BackgroundAnimation 4s ease infinite;
+}
+
+li{
+  list-style: none;
+}
+
+h1{
+  text-align: center;
+}
+
+#navbar{
+  position: sticky;
+  list-style-type: none;
+  height: 10vh;
+  color:#e9e9e9;
+  
+}
+
+#left-navbar{
+  float: left;
+  padding-right: 20vh;  
+}
+#right-navbar{
+  float: right;
+  padding-right: 5vh;
+}
+
+#nickname-navbar{
+  padding-left: 10vh;
+}
+
+#nb-list{
+  list-style-type: none;
+  display: flex;
+  padding: 5px;
+}
+
+
+#nb-list li{
+  margin-inline: 30px;
+}
+
+/*Animations and some stuff*/
+/*Background Animation*/
+
+@-webkit-keyframes BackgroundAnimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes BackgroundAnimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0% 50%}
+}
+@keyframes BackgroundAnimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0% 50%}
+}
+
+/*About me section*/
+.whoami{
+  padding:1vh;
+  padding-bottom: 0;
+  text-align: center;
+  color:#e9e9e9;
+}
+
+.title-dev h1{
+  font-weight: bolder;
+  font-size: 40px;
+}
+.about-me{
+  font-weight: 350;
+  font-size: 20px;
+}
+
+/*Projects Section*/
+
+.projects-title{
+  color: #e9e9e9;
+  text-align: center;
+  padding-top: 9.3vh;
+}
+
+.card-group{
+  display: inline-flex;
+  margin-inline: 12px;
+  margin-bottom: 50px;
+}
+
+.card{
+  display: inline-block;
+  margin: 5vh;
+  padding: 20px;
+  border-radius: 15px;
+  color: #e9e9e9;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: transform .4s;
+}
+
+.card:hover{
+  transform: scale(1.11);
+  background: rgba(255, 255, 255, 0.1);
+  --border-width: 3px;
+  border-radius: var(--border-width);
+}
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  z-index: -1;
+  width: calc(100% + var(--border-width) * 2);
+  height: calc(100% + var(--border-width) * 2);
+  background: linear-gradient(
+    60deg,
+    #581bb3,#1b56b3,  #7a1bb3,
+    #581bb3,#1b56b3,  #7a1bb3,#7a1bb3
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: 15px;
+  animation: moveGradient 3s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+ 
+
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.card-description{
+  text-align: center;
+  border-radius: 5px;
+}
+
+.skill-schema{
+  color: black;
+  margin: auto;
+  padding-top: 10px;
+  align-items: center;
+  background-color: #e9e9e9;
+}
+
+.skill-title{
+  margin: auto;
+  border-radius: 15px;
+}
+
+.skills{
+  display:grid;
+  grid-template-columns: auto auto auto;
+}
+
+img{
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  max-height: 40%;
+}
